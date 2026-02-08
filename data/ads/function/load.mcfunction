@@ -8,6 +8,9 @@ execute unless score .ads_enabled ads.config matches -2147483648..2147483647 run
 execute unless score .rank_difference ads.config matches -2147483648..2147483647 run tellraw @a[tag=is_admin] [{text:"LᴇɢɪᴛɪAᴅꜱ ",color:yellow},{text:">> ",color:dark_gray},{text:"Config default of ",color:yellow},{text:"Rank Advantage ",color:gray},{text:"set to ",color:yellow},{text:"ᴏꜰꜰ",color:red}]
 execute unless score .rank_difference ads.config matches -2147483648..2147483647 run scoreboard players set .rank_difference ads.config 0
 
+execute unless score .ad_sound ads.config matches -2147483648..2147483647 run tellraw @a[tag=is_admin] [{text:"LᴇɢɪᴛɪAᴅꜱ ",color:yellow},{text:">> ",color:dark_gray},{text:"Config default of ",color:yellow},{text:"Ad Sound ",color:gray},{text:"set to ",color:yellow},{text:"ᴏꜰꜰ",color:red}]
+execute unless score .ad_sound ads.config matches -2147483648..2147483647 run scoreboard players set .ad_sound ads.config 0
+
 execute unless score .random_ads ads.config matches -2147483648..2147483647 run tellraw @a[tag=is_admin] [{text:"LᴇɢɪᴛɪAᴅꜱ ",color:yellow},{text:">> ",color:dark_gray},{text:"Config default of ",color:yellow},{text:"Ad Order ",color:gray},{text:"set to ",color:yellow},{text:"ʀᴀɴᴅᴏᴍ",color:green}]
 execute unless score .random_ads ads.config matches -2147483648..2147483647 run scoreboard players set .random_ads ads.config 1
 
