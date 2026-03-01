@@ -1,3 +1,10 @@
+# Return if no ads
+execute if entity @s[tag=is_whitelisted] if score .wl_ads ads.config matches 1 run return fail
+execute if entity @s[tag=is_admin] if score .admin_ads ads.config matches 1 run return fail
+execute if entity @s[tag=is_dev] if score .dev_ads ads.config matches 1 run return fail
+execute if entity @s[tag=is_coowner] if score .co_ads ads.config matches 1 run return fail
+execute if entity @s[tag=is_owner] if score .owner_ads ads.config matches 1 run return fail
+
 # Store ad formatting in temp
 $data modify storage legitiads:ads ad set from storage legitiads:ads ads[$(loaded_ad)]
 
