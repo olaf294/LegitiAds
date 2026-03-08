@@ -2,7 +2,7 @@ scoreboard objectives add ads dummy
 scoreboard objectives add ads.config trigger {text:"LᴇɢɪᴛɪAᴅꜱ Cᴏɴꜰɪɢ",color:"#ff6600"}
 
 # If Ads on Load
-execute if score .ads_on_load ads.config matches 1 run scoreboard players set @a ads 2147483646
+execute if score .ads_on_load ads.config matches 1 run function ads:ads_on_load
 
 # Reset Uninstall Thingy
 execute if score .uninstall ads.config matches 1.. run tellraw @a[tag=is_admin] [{text:"LᴇɢɪᴛɪAᴅꜱ ",color:yellow},{text:">> ",color:dark_gray},{text:"Uninstall has been cancelled.",color:yellow}]

@@ -50,3 +50,5 @@ execute as @s[scores={ads.config=1040}] run scoreboard players set .random_ads a
 execute as @s[scores={ads.config=1041}] at @s run playsound block.note_block.hat ui @s ~ ~ ~ 1.5 1 0
 tellraw @s[scores={ads.config=1041}] [{text:"LᴇɢɪᴛɪAᴅꜱ ",color:yellow},{text:">> ",color:dark_gray},{text:"Ad Order set to Oʀᴅᴇʀᴇᴅ.",color:yellow}]
 execute as @s[scores={ads.config=1041}] run scoreboard players set .random_ads ads.config 0
+
+#function ads:tick/trigger

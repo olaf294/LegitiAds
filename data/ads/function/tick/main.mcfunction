@@ -3,7 +3,7 @@ execute if entity @a[tag=is_admin] run function ads:tick/trigger
 
 # Ads
 execute if score .ads_enabled ads.config matches 0 run return fail
-execute as @a run scoreboard players add @s ads 1
+scoreboard players add @a ads 1
 # Global Ads (if RDif off)
 execute as @a if score .rank_difference ads.config matches 0 if score @s ads >= .non_cd ads.config run return run function ads:load_ad
 # NoRank Ad

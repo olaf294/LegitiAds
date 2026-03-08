@@ -3,7 +3,7 @@ scoreboard players enable @a[tag=is_admin] ads.config
 
 execute unless entity @a[scores={ads.config=1..}] run return fail
 
-execute as @a[scores={ads.config=1000..1222}] run return run function ads:config/show
+execute as @a[scores={ads.config=1000..1222}] run function ads:config/show
 
 # Config Tellraw
 tellraw @a[scores={ads.config=1..}] {text:"=== LᴇɢɪᴛɪAᴅꜱ Cᴏɴꜰɪɢ ===",color:gold,hover_event:{action:show_text,value:"LᴇɢɪᴛɪAᴅꜱ - v1.3"}}
@@ -26,4 +26,5 @@ tellraw @a[scores={ads.config=1..}] ""
 
 tellraw @a[scores={ads.config=1..}] [{text:"Advanced Config:      ",color:gray,hover_event:{action:show_text,value:{text:"Opens Ad Control Panel",color:"#ff55ff"}}},{text:"[ᴏᴘᴇɴ]",color:gold,hover_event:{action:show_text,value:{text:"Click to open the Ad Control Panel and change advanced settings, such as Rank Cooldown and more.",color:gold}},click_event:{action:run_command,command:"/trigger ads.config set 1111"}}]
 tellraw @a[scores={ads.config=1..}] [{text:"LegitiAds Debug:      ",color:gray,hover_event:{action:show_text,value:{text:"Toggle Debug Logger for Admins\nShows what ads are being shown to players",color:"#ff55ff"}}},{text:"[ᴛᴏɢɢʟᴇ]",color:yellow,hover_event:{action:show_text,value:{text:"Click to toggle the Ad Debugger for yourself.",color:gold}},click_event:{action:run_command,command:"/trigger ads.config set 1222"}}]
+
 scoreboard players reset @a[scores={ads.config=1..}] ads.config
