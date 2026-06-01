@@ -1,4 +1,11 @@
-scoreboard players set @s ads 0
+scoreboard players operation @s[tag=!is_am] ads = .non_cd ads.config
+scoreboard players operation @s[tag=is_am,tag=!is_fm] ads = .am_cd ads.config
+scoreboard players operation @s[tag=is_fm,tag=!is_fm2] ads = .fm_cd ads.config
+scoreboard players operation @s[tag=is_fm2,tag=!is_xm] ads = .fm2_cd ads.config
+scoreboard players operation @s[tag=is_xm] ads = .xm_cd ads.config
+
+# Global Ads (if RDif off)
+execute if score .rank_difference ads.config matches 0 run scoreboard players operation @s ads = .non_cd ads.config
 
 # Array Len
 execute store result score .total_ads ads.config run data get storage legitiads:ads ads

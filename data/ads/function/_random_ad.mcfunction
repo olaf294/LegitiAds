@@ -10,5 +10,5 @@ $data modify storage legitiads:ads ad set from storage legitiads:ads ads[$(loade
 
 # Display Ad
 tellraw @s {storage:"legitiads:ads",nbt:ad,interpret:1b}
-tellraw @a[tag=legitiads.debugview] [{text:"LᴇɢɪᴛɪAᴅꜱ ᴅᴇʙᴜɢ ",color:yellow},{text:">> ",color:dark_gray},{text:"Showed Ad to ",color:yellow},{selector:"@s",color:green},{text:"\nAd: ",color:yellow},{text:"\"",color:gray},{storage:"legitiads:ads",nbt:ad,interpret:1b},{text:"\"",color:gray}]
+tellraw @a[tag=legitiads.debugview] ["",{text:"LᴇɢɪᴛɪAᴅꜱ ᴅᴇʙᴜɢ ",color:yellow},{text:"» ",color:dark_gray},{text:"Showed Ad to ",color:yellow},{selector:"@s",color:green},{text:"\nAd: ",color:yellow},{text:"\"",color:gray},{storage:"legitiads:ads",nbt:ad,interpret:1b},{text:"\"",color:gray}]
 execute if score .ad_sound ads.config matches 1 at @s run playsound block.note_block.pling master @s ~ ~ ~ 2 1 1

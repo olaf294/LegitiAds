@@ -6,7 +6,7 @@ execute unless entity @a[scores={ads.config=1..}] run return fail
 execute as @a[scores={ads.config=1000..1222}] run function ads:config/show
 
 # Config Tellraw
-tellraw @a[scores={ads.config=1..}] {text:"=== LᴇɢɪᴛɪAᴅꜱ Cᴏɴꜰɪɢ ===",color:gold,hover_event:{action:show_text,value:"LᴇɢɪᴛɪAᴅꜱ - v1.3"}}
+tellraw @a[scores={ads.config=1..}] {text:"=== LᴇɢɪᴛɪAᴅꜱ Cᴏɴꜰɪɢ ===",color:gold,hover_event:{action:show_text,value:"LᴇɢɪᴛɪAᴅꜱ - v1.4"}}
 execute if score .ads_enabled ads.config matches 0 run tellraw @a[scores={ads.config=1..}] [{text:"Ads:                 ",color:gray,hover_event:{action:show_text,value:{text:"Master Ad Switch Toggle.",color:"#ff55ff"}}},{text:"ᴇɴᴀʙʟᴇᴅ",color:green,underlined:0b,bold:0b,hover_event:{action:show_text,value:{text:"Click to enable ads.",color:gold}},click_event:{action:run_command,command:"/trigger ads.config set 1000"}}," ",{text:"ᴅɪꜱᴀʙʟᴇᴅ",color:red,underlined:1b,bold:1b}]
 execute if score .ads_enabled ads.config matches 1 run tellraw @a[scores={ads.config=1..}] [{text:"Ads:                 ",color:gray,hover_event:{action:show_text,value:{text:"Master Ad Switch Toggle.",color:"#ff55ff"}}},{text:"ᴇɴᴀʙʟᴇᴅ",color:green,underlined:1b,bold:1b}," ",{text:"ᴅɪꜱᴀʙʟᴇᴅ",color:red,underlined:0b,bold:0b,hover_event:{action:show_text,value:{text:"Click to disable ads.",color:gold}},click_event:{action:run_command,command:"/trigger ads.config set 1001"}}]
 
